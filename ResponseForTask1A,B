@@ -11,7 +11,7 @@ Z kolei Klasa abstrakcyjna opisuje nam czym te obiekty są.
 Wracając do przykładu klasy abstrakcyjnej motocykl, rower, samochód i ciężarówka to POJAZDY. Co one robią?
 Wydają dźwięk który my opisujemy za pomocą interfejsu.
 Innym zastosowaniem interfejsu jest np. tworzenie szablonów metod tak zwanych portów.
-Pojęcie związane z architekturą heksagonalną. Wtedy np. klasa service implementuje nam interfejs servce.
+Pojęcie związane z architekturą heksagonalną. Wtedy np. klasa service implementuje nam interfejs service.
 Daje nam to swobodę w działaniu i uniezależnia nas to od konkretnej implementacji.
 Dzięki takiemu podejściu osiągamy loose coupling, niskie sprzężenie komponentów co jest nie nieocenione
 podczas testowania. Warto dodać że klasa może implementować wiele interfejsów na raz. W przypadku dziedziczenia możliwe
