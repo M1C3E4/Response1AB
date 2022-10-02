@@ -1,0 +1,38 @@
+Klas abstrakcyjnych używa się w celu zdefiniowania obiektu. Np motocykl, samochód, rower, ciężarówka
+to wszystko są pojazdy-tutaj użyjemy KLASY ABSTRAKCYJNEJ.
+Natomiast wszystkie pojazdy wydają jakieś dźwięki, nie interesuje nas na tym poziomie jakie to są dźwięki
+ważne że każdy pojazd je wydaje. Do zdefiniowania szablonu że coś wydaje ten dźwięk stworzymy INTERFEJS
+a dopiero implementacja tego interfejsu będzie uszczegółowieniem który pojazd wydaje jaki dźwięk.
+Klasa abstrakcyjna może implementować interfejs. Można stwierdzić ze klasa go realizuje. Co to oznacza?
+A no tyle że jeżeli mamy dwie klasy abstrakcyjne np. urządzenia audio i pojazdy, to zarówno pojazdy i urządzenia audio
+wydają dźwięk. Przekładając to na techniczny język, obie klasy abstrakcyjne implementują ten interfejs,
+opisują nam co te obiekty robią. Można stwierdzić że interfejsy opisują zachowanie obiektów, co one robią.
+Z kolei Klasa abstrakcyjna opisuje nam czym te obiekty są.
+Wracając do przykładu klasy abstrakcyjnej motocykl, rower, samochód i ciężarówka to POJAZDY. Co one robią?
+Wydają dźwięk który my opisujemy za pomocą interfejsu.
+Innym zastosowaniem interfejsu jest np. tworzenie szablonów metod tak zwanych portów.
+Pojęcie związane z architekturą heksagonalną. Wtedy np. klasa service implementuje nam interfejs servce.
+Daje nam to swobodę w działaniu i uniezależnia nas to od konkretnej implementacji.
+Dzięki takiemu podejściu osiągamy loose coupling, niskie sprzężenie komponentów co jest nie nieocenione
+podczas testowania. Warto dodać że klasa może implementować wiele interfejsów na raz. W przypadku dziedziczenia możliwe
+jest dziedziczenie tylko po jednej klasie.
+
+
+LinkedList vs Array
+Tablica to struktura danych zawierająca indeksy pod którymi są umieszczane dane. Tablicę indeksujemy od 0.
+To oznacza ze pierwszy element ma indeks 0. Indeksy są ustalane w momencie kompilacji.
+Dodatkowo z góry trzeba określić rozmiar tej struktury.
+Jeśli zaimplementowaliśmy tablice 10-cio elementowa to tylko 10 elementów jesteśmy w stanie w niej umieścić.
+Chcąc dodać 11 element będziemy zmuszeni do zmiany wielkości tablicy poprzez usunięcie wartości 10 i wpisanie wartości 11.
+Wstawianie dodatkowych elementów jest powolne. Dane w tablicy są od siebie nie zależne.
+Z kolei LinkedList to Lista podwójnie wiązana. W tej strukturze danych nie ma indeksów.
+Są referencje ustalane w momencie wykonywania. Każdy element zawiera referencje do następnego co pozwala
+odnosić się do wskazanych przez nas elementów. LinkedList jest przez to powolna w porównaniu do tablicy ponieważ
+chcą dostać się do 5-tego elementu musimy iterować po 1 ,2 ,3 ,4 elemencie ponieważ 4 element zawiera referencje do 5.
+Na tej podstawie można wywnioskować że elementy listy są od siebie zależne.
+Tracąc element 3 w liście nie dostaniemy się do 4 i kolejnych.
+Nie można zapomnieć o ważnym elemencie jakim jest automatyczne zwiększanie pojemności. Tak.
+LinkedList automatycznie zwiększa swoją pojemność poprzez dodawanie kolejnych elementów.
+Nie musimy określać z góry rozmiaru tej struktury tak jak miało to miejsce w przypadku tablicy.
+Wstawianie elementów jest dużo lepiej opracowane niż w przypadku tablicy dzięki automatycznemu zwiększaniu się jej rozmiaru.
+
